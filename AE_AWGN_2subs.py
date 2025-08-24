@@ -611,6 +611,7 @@ for Eb_N0_dB in np.arange(10, 18.5, 0.5):
     print("BER2 = %.10f" % s2_ber_test)
     print('\n')
     sys.stdout.flush()
+
     # Save the computed BER and SER
     Vec_Eb_N0.append(Eb_N0_dB)
     s1_test_ser.append(s1_ser)
@@ -635,15 +636,14 @@ plt.xticks(size=font_size)
 plt.xlabel('Eb/N0', fontsize=font_size)
 plt.ylabel('BER', fontsize=font_size)
 
-plt.title(
-    'k=' + str(k) + " train_Eb_dB ")
+plt.title(" BER ")
 plt.grid('true')
 
 if HPCC == 0:
-    plt.savefig('BER2UE{}.png'.format(i))
+    plt.savefig('BER.png')
 if HPCC == 1 and AE2 == 0:
-    plt.savefig('BER2UE{}.png'.format(i))
+    plt.savefig('BER.png')
 if HPCC == 1 and AE2 == 1:
-    plt.savefig('2BER2UE{}.png'.format(i))
+    plt.savefig('BER2.png')
 plt.show()
 plt.close()
