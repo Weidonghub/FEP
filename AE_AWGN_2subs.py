@@ -625,7 +625,7 @@ for Eb_N0_dB in np.arange(10, 18.5, 0.5):
 # Plot the BER figure
 marker_size = 4
 font_size = 13
-fig = plt.figure(num=i,dpi=300, figsize=(10, 6))  # 新建一个图像窗口
+fig = plt.figure(num=1,dpi=300, figsize=(10, 6))  # 新建一个图像窗口
 plt.semilogy(Vec_Eb_N0, s1_test_ber, marker='*', markersize=marker_size, color='blue', label='s1_ber', linewidth=1)
 plt.semilogy(Vec_Eb_N0, s2_test_ber, marker='x', markersize=marker_size, color='blue', label='s2_ber', linewidth=1)
 plt.semilogy(Vec_Eb_N0, s_test_ber, color='green', label='s_ber', linewidth=1)
